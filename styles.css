@@ -116,7 +116,8 @@ body {
   gap: 1.4em;
 }
 
-.profile-options img {
+.profile-options img,
+.trending-profile img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -222,7 +223,8 @@ body {
   grid-area: announcements;
 }
 
-.announcements .card {
+.announcements .card,
+.trending .card {
   display: flex;
   flex-direction: column;
   gap: 0.9em;
@@ -239,7 +241,7 @@ body {
 }
 
 .announcement-item {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #94a3b8;
 }
 
 .announcement-item:last-of-type {
@@ -248,5 +250,19 @@ body {
 
 .trending {
   grid-area: trending;
-  background-color: yellow;
+}
+
+.trending-profile {
+  margin: 0.4em 0;
+  display: flex;
+  gap: 1em;
+}
+
+.trending-username {
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.trending-bio {
+  font-size: 0.8rem;
 }
