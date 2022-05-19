@@ -11,7 +11,7 @@ body {
 .container {
   display: grid;
   grid-template-columns: minmax(250px, 1fr) 5fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 200px 5fr;
 }
 
 .sidebar {
@@ -72,6 +72,7 @@ body {
   color: #0f172a;
   grid-column: 2 / 3;
   padding: 2em 3em 1em;
+  box-shadow: 10px 10px 10px black;
 }
 
 .header-top {
@@ -176,10 +177,76 @@ body {
 
 .nav-bar a {
   text-decoration: none;
+  font-weight: 700;
   color: #f8fafc;
 }
 
 .content {
-  background-color: palevioletred;
+  background-color: #e2e8f0;
   grid-column: 2 / 3;
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "projects announcements"
+    "projects trending";
+}
+
+.content-heading {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.card {
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 10px;
+  margin-top: 1em;
+}
+
+.projects,
+.announcements,
+.trending {
+  padding: 1em;
+  color: #1e293b;
+}
+
+.projects {
+  grid-area: projects;
+  background-color: red;
+}
+
+.announcements {
+  grid-area: announcements;
+}
+
+.announcements .card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9em;
+}
+
+.announcement-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.announcement-description {
+  font-size: 0.8rem;
+  padding: 0.5em 0 1em;
+}
+
+.announcement-item {
+  border-bottom: 1px solid black;
+}
+
+.announcement-item:last-of-type {
+  border: none;
+}
+
+.trending {
+  grid-area: trending;
+  background-color: yellow;
 }
