@@ -203,7 +203,7 @@ body {
 .card {
   background-color: #fff;
   padding: 1em;
-  border-radius: 10px;
+  border-radius: 6px;
   margin-top: 1em;
 }
 
@@ -222,6 +222,10 @@ body {
   display: grid;
   gap: 0.9em;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.project-item .card {
+  border-left: 6px solid #0f172a;
 }
 
 .project-title {
