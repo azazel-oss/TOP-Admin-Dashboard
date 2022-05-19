@@ -216,7 +216,32 @@ body {
 
 .projects {
   grid-area: projects;
-  background-color: red;
+}
+
+.project-list {
+  display: grid;
+  gap: 0.9em;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.project-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.project-description {
+  font-size: 0.9rem;
+  margin: 1rem 0 1rem 0;
+}
+
+.project-cta {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.9em;
+}
+
+.project-cta:hover {
+  cursor: pointer;
 }
 
 .announcements {
